@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  certbot:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: renew
+    env_file:
+      - certbot.env
+    volumes:
+      - ./letsencrypt:/etc/letsencrypt
+      - ./conf:/root/conf:ro
+      - ./script:/root/script:ro

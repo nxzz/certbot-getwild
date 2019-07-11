@@ -1,0 +1,4 @@
+conf/*
+letsencrypt/*
+*.env
+!.gitkeep

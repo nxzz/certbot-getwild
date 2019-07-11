@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# login gcloud
+gcloud auth activate-service-account --key-file=/root/conf/${SERVICE_ACCOUNT_JSONFILE}
+gcloud config set project `cat /root/conf/${SERVICE_ACCOUNT_JSONFILE}| grep project_id|cut -d "\"" -f4`
+
+certbot certonly --manual \
+    --preferred-challenges=dns \
+    --manual-auth-hook /root/script/dns-01-auth.sh \
+    --manual-cleanup-hook /root/script/dns-01-clean.sh \
+    -d ${TARGET_DOMAIN} -d *.${TARGET_DOMAIN} \
+    --server https://acme-v02.api.letsencrypt.org/directory \
+    --agree-tos -m ${EMAIL} \
+    --manual-public-ip-logging-ok --dry-run
