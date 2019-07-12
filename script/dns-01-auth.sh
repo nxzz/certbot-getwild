@@ -10,4 +10,4 @@ echo "_acme-challenge.$CERTBOT_DOMAIN. 1 IN TXT \"$CERTBOT_VALIDATION\"" >> /tmp
 gcloud dns record-sets import -q --zone="${ZONE_NAME}" --zone-file-format --delete-all-existing /tmp/zone
 
 # 反映まち
-sleep 80
+sleep 120

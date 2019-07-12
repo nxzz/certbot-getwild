@@ -4,4 +4,4 @@
 gcloud auth activate-service-account --key-file=/root/conf/${SERVICE_ACCOUNT_JSONFILE}
 gcloud config set project `cat /root/conf/${SERVICE_ACCOUNT_JSONFILE}| grep project_id|cut -d "\"" -f4`
 
-certbot renew --force-renewal --dry-run
+certbot renew

@@ -11,4 +11,5 @@ certbot certonly --manual \
     -d ${TARGET_DOMAIN} -d *.${TARGET_DOMAIN} \
     --server https://acme-v02.api.letsencrypt.org/directory \
     --agree-tos -m ${EMAIL} \
-    --manual-public-ip-logging-ok --dry-run
+    --eff-email \
+    --manual-public-ip-logging-ok
