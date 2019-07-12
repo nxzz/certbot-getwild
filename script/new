@@ -13,3 +13,5 @@ certbot certonly --manual \
     --agree-tos -m ${EMAIL} \
     --eff-email \
     --manual-public-ip-logging-ok
+
+\cp -f /etc/letsencrypt/live/${TARGET_DOMAIN}/* /root/cert

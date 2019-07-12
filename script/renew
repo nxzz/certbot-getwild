@@ -5,3 +5,5 @@ gcloud auth activate-service-account --key-file=/root/conf/${SERVICE_ACCOUNT_JSO
 gcloud config set project `cat /root/conf/${SERVICE_ACCOUNT_JSONFILE}| grep project_id|cut -d "\"" -f4`
 
 certbot renew
+
+\cp -f /etc/letsencrypt/live/${TARGET_DOMAIN}/* /root/cert

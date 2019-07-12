@@ -20,3 +20,4 @@ Google Domains + Google Cloud DNS で Let's Encrypt のワイルドカード証�
 * 更新時
   * `dcker-compose up`
   * 自動化推奨
+* どちらの場合も ./cert 以下に最新の証明書がコピーされる

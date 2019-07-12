@@ -10,4 +10,5 @@ services:
     volumes:
       - ./letsencrypt:/etc/letsencrypt
       - ./conf:/root/conf:ro
+      - ./cert:/root/cert
       - ./script:/root/script:ro
