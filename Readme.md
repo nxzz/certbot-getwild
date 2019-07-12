@@ -18,6 +18,6 @@ Google Domains + Google Cloud DNS で Let's Encrypt のワイルドカード証�
 * 新規発行時
   * `docker-compose run certbot new`
 * 更新時
-  * `dcker-compose up`
+  * `docker-compose up`
   * 自動化推奨
 * どちらの場合も ./cert 以下に最新の証明書がコピーされる
