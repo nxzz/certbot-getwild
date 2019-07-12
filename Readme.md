@@ -1,4 +1,4 @@
-# Let's Encrypt Get Wild(card)
+# Certbot Get Wild(card)
 Google Domains + Google Cloud DNS で Let's Encrypt のワイルドカード証明書を取得する
 
 ## 準備
